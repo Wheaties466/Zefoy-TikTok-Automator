@@ -27,7 +27,7 @@ class zefoy:
 
     def __init__(self):
         chrome_options = uc.ChromeOptions()
-        chrome_binary_path = '/path/to/chrome.exe' # Replace with your Chrome binary path
+        chrome_binary_path = '\\path\\to\\chrome.exe'  # Replace with your Chrome binary path
         chrome_options.binary_location = chrome_binary_path
         
         self.driver = uc.Chrome(options=chrome_options)
