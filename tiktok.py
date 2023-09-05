@@ -26,7 +26,11 @@ text = """
 class zefoy:
 
     def __init__(self):
-        self.driver = uc.Chrome()
+        chrome_options = uc.ChromeOptions()
+        chrome_binary_path = '/path/to/chrome.exe' # Replace with your Chrome binary path
+        chrome_options.binary_location = chrome_binary_path
+        
+        self.driver = uc.Chrome(options=chrome_options)
         self.url = "https://zefoy.com"
         self.captcha_box = '/html/body/div[4]/div[2]/form/div/div'
         self.clear = "clear"
